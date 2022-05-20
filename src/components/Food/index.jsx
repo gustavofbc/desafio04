@@ -1,29 +1,37 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 
 import { Container } from './styles';
 import api from '../../services/api';
 
-class Food extends Component {
-  constructor(props) {
-    super(props);
+interface Food {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  available: boolean;
+  image: string;
+}
 
-    const { available } = this.props.food;
-    this.state = {
-      isAvailable: available
-    };
-  }
+function Food(props: Food) {
 
-  toggleAvailable = async () => {
-    const { food } = this.props;
-    const { isAvailable } = this.state;
+  const { available } = props;
+  const [setIsAvailable, isAvailable] = useState<Food>();
+  // this.state = {
+  //   isAvailable: available
+  // };
+
+  async function toggleAvailable(props: Food) {
+    const { food } = props;
+    // const { isAvailable } = this.state;
+    // const [setIsAvailable, isAvailable] = useState();
 
     await api.put(`/foods/${food.id}`, {
       ...food,
       available: !isAvailable,
     });
-
-    this.setState({ isAvailable: !isAvailable });
+    setIsAvailable(!isAvailable)
+    // this.setState({ isAvailable: !isAvailable });
   }
 
   setEditingFood = () => {
