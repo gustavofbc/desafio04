@@ -36,7 +36,7 @@ Instale o goRestaurant com Yarn:
 
 Na pasta de sua escolha clone o projeto via git com o comando:
 ```
-git clone git@github.com:gustavofbc/desafio01.git
+git clone git@github.com:gustavofbc/desafio04.git
 ```
 
 No diretório do projeto instale suas dependências executando o comando:
