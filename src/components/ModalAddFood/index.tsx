@@ -53,4 +53,4 @@ export function ModalAddFood({ handleAddFood, setIsOpen, isOpen }: modalAddFoodP
 }
 // };
 
-export default ModalAddFood;
+// export default ModalAddFood;
