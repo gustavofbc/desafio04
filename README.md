@@ -31,7 +31,7 @@
 
 ### :wrench: Instalação
 
-Instale to.to com Yarn:
+Instale o goRestaurant com Yarn:
 
 
 Na pasta de sua escolha clone o projeto via git com o comando:
