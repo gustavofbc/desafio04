@@ -16,15 +16,6 @@ interface FoodProps {
   image: string,
 }
 
-interface EditingFoodProps {
-  id: number,
-  name: string,
-  description: string,
-  price: number,
-  available: boolean,
-  image: string,
-}
-
 // class Dashboard extends Component {
 export function Dashboard() {
   // constructor(props) {
@@ -37,7 +28,7 @@ export function Dashboard() {
   //   }
   // }
   const [foods, setFoods] = useState<FoodProps[]>([]);
-  const [editingFood, setEditingFood] = useState<EditingFoodProps>({} as EditingFoodProps);
+  const [editingFood, setEditingFood] = useState<FoodProps>({} as FoodProps);
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 

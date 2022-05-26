@@ -32,9 +32,9 @@ export function Modal({ isOpen, setIsOpen, children }: modalProps) {
     if (isOpen !== modalStatus) {
       console.log(isOpen, modalStatus)
       // this.setState({ modalStatus: isOpen })
-      setModalStatus(!isOpen);
+      setModalStatus(isOpen);
     }
-  })
+  }, [isOpen, modalStatus])
 
   // render() {
   // const { children, setIsOpen } = this.props;
