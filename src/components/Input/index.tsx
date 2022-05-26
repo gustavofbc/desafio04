@@ -12,9 +12,10 @@ import { Container } from './styles';
 interface inputProps {
   name: string,
   Icon?: any,
+  placeholder?: string,
 }
 
-export function Input({ name, Icon, ...rest }: inputProps) {
+export function Input({ name, Icon, placeholder, ...rest }: inputProps) {
   // const Input = ({ name, icon: Icon, ...rest }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -50,6 +51,7 @@ export function Input({ name, Icon, ...rest }: inputProps) {
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
+        placeholder={placeholder}
         {...rest}
       />
     </Container>
